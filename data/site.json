@@ -1,0 +1,76 @@
+{
+ "nombre": "Filo Real",
+ "lema": "Barber Club",
+ "eslogan": "Corte · Barba · Detalle",
+ "moneda": "Bs",
+ "whatsapp": "",
+ "direccion": "La Paz, Bolivia — agrega aquí la dirección exacta del local.",
+ "horario": [
+  [
+   "Lunes a viernes",
+   "09:00 – 20:00"
+  ],
+  [
+   "Sábados",
+   "09:00 – 18:00"
+  ],
+  [
+   "Domingos",
+   "Cerrado"
+  ]
+ ],
+ "redes": {
+  "instagram": "",
+  "facebook": "",
+  "tiktok": ""
+ },
+ "entregas": [
+  {
+   "id": "retiro",
+   "nombre": "Retiro en la barbería",
+   "costo": 0
+  }
+ ],
+ "filtros": {
+  "capa1": {
+   "campo": "tipo",
+   "titulo": "Tipo"
+  },
+  "capa2": {
+   "campo": "categoria",
+   "titulo": "Categoría"
+  }
+ },
+ "_nota": "Datos de ejemplo: validar con el cliente. whatsapp: solo dígitos con código de país (ej. 59171234567).",
+ "equipo": [
+  {
+   "nombre": "Mauricio",
+   "rol": "Maestro barbero",
+   "imagen": "assets/images/equipo-mauricio.svg"
+  },
+  {
+   "nombre": "Rodrigo",
+   "rol": "Especialista en fade",
+   "imagen": "assets/images/equipo-rodrigo.svg"
+  },
+  {
+   "nombre": "Alexis",
+   "rol": "Barba y navaja",
+   "imagen": "assets/images/equipo-alexis.svg"
+  }
+ ],
+ "reserva": {
+  "horas": [
+   "09:00",
+   "10:00",
+   "11:00",
+   "12:00",
+   "14:00",
+   "15:00",
+   "16:00",
+   "17:00",
+   "18:00",
+   "19:00"
+  ]
+ }
+}

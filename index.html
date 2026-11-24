@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es" data-negocio="filo-real" data-tema="oscuro" data-tema-defecto="oscuro" data-edad="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Filo Real — Barber Club. Catálogo en línea: Corte · Barba · Detalle.">
+  <meta name="theme-color" content="#0e0e10">
+  <title>Filo Real · Barber Club | La Paz</title>
+  <link rel="manifest" href="manifest.json"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>try{var t=JSON.parse(localStorage.getItem('filo-real:tema'));if(t)document.documentElement.dataset.tema=t}catch(e){}</script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="vendor/jquery-3.6.0.min.js" defer></script>
+  <script src="vendor/purify.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head><body class="pagina" data-hidratado="false">
+  <header class="encabezado">
+    <div class="encabezado__menu" id="contenedorMenu" data-hidratado="false"><button class="boton-icono boton-icono--estatico" id="btnMenu" type="button" aria-label="Menú (cargando)" aria-expanded="false" aria-controls="menu">☰</button></div>
+    <a class="marca" href="#inicio" aria-label="Filo Real inicio"><img class="marca__logo" src="assets/images/logo.svg" width="44" height="44" alt=""><span class="marca__texto"><b class="marca__nombre" data-site="nombre">Filo Real</b><small class="marca__lema" data-site="lema">Barber Club</small></span></a>
+    <nav class="menu" id="menu" aria-label="Menú principal"><ul class="menu__lista"><li class="menu__item"><a class="menu__enlace" href="#servicios">Servicios</a></li><li class="menu__item"><a class="menu__enlace" href="#estilos">Estilos</a></li><li class="menu__item"><a class="menu__enlace" href="#equipo">Equipo</a></li><li class="menu__item"><a class="menu__enlace" href="#catalogo">Catálogo</a></li><li class="menu__item"><a class="menu__enlace" href="#preguntas">Preguntas</a></li><li class="menu__item"><a class="menu__enlace" href="#contacto">Contacto</a></li></ul></nav>
+    <div class="encabezado__acciones"><span class="estado-red" id="estadoRed" role="status">🟢 En línea</span>
+      <button class="boton-icono" id="botonTema" type="button" aria-label="Cambiar entre modo claro y oscuro" aria-pressed="false">☀</button>
+      <button class="boton-icono abrir-carrito" type="button" aria-label="Abrir carrito">🛍<span class="insignia" id="contadorCarrito">0</span></button></div>
+  </header>
+  <main id="inicio">
+    <section class="contenedor portada"><div><p class="portada__sobretitulo">Corte · Barba · Detalle</p><h1 class="portada__titulo">Tu estilo se trabaja <em>en los detalles.</em></h1><p class="portada__texto">Reserva tu turno en línea, elige a tu barbero y llega a tu hora. Servicios clásicos y modernos en el corazón de La Paz.</p>
+      <div class="portada__acciones"><button class="boton boton--primario" data-abrir="modalReserva" type="button">Reservar turno ↗</button><a class="boton boton--contorno" href="#catalogo">Ver servicios</a></div></div>
+      <div class="portada__medio"><div class="collage"><img class="collage__item" src="assets/images/portada-barberia-realista.webp" width="1500" height="1000" alt="Fotografía de ambiente de barbería con un barbero realizando un corte" fetchpriority="high"><img class="collage__item" src="assets/images/fade-degradado.svg" width="400" height="500" alt="Fade"><img class="collage__item" src="assets/images/navaja-profesional.svg" width="400" height="500" alt="Navaja"></div></div></section>
+    <div class="contenedor"><div class="fila-datos"><div class="dato"><span class="dato__numero">01</span><span class="dato__texto">Turnos online</span></div><div class="dato"><span class="dato__numero">02</span><span class="dato__texto">Barberos expertos</span></div><div class="dato"><span class="dato__numero">03</span><span class="dato__texto">Higiene total</span></div></div></div>
+    <section class="seccion" id="servicios"><div class="contenedor"><div class="seccion__encabezado"><p class="seccion__sobretitulo">Los más pedidos</p><h2 class="seccion__titulo">Servicios <em>destacados</em></h2></div><div class="destacados" id="destacados"></div></div></section>
+    <section class="seccion seccion--tinta" id="estilos"><div class="contenedor"><div class="seccion__encabezado"><p class="seccion__sobretitulo">Inspiración</p><h2 class="seccion__titulo">Estilos de <em>corte</em></h2><p class="seccion__texto">Algunos de los acabados que trabajamos. Muéstranos tu referencia y la adaptamos a ti.</p></div>
+      <div class="estilos"><figure class="estilo"><img class="estilo__imagen" src="assets/images/fade-degradado.svg" width="400" height="500" alt="Fade" loading="lazy"><figcaption class="estilo__leyenda">Fade</figcaption></figure><figure class="estilo"><img class="estilo__imagen" src="assets/images/pompadour-y-peinado.svg" width="400" height="500" alt="Pompadour" loading="lazy"><figcaption class="estilo__leyenda">Pompadour</figcaption></figure><figure class="estilo"><img class="estilo__imagen" src="assets/images/corte-cl-sico.svg" width="400" height="500" alt="Clásico" loading="lazy"><figcaption class="estilo__leyenda">Clásico</figcaption></figure><figure class="estilo"><img class="estilo__imagen" src="assets/images/perfilado-de-barba.svg" width="400" height="500" alt="Barba perfilada" loading="lazy"><figcaption class="estilo__leyenda">Barba perfilada</figcaption></figure></div></div></section>
+    <section class="seccion" id="equipo"><div class="contenedor"><div class="seccion__encabezado"><p class="seccion__sobretitulo">Nuestro equipo</p><h2 class="seccion__titulo">Manos <em>expertas</em></h2></div><div class="rejilla rejilla--chica" id="listaEquipo"></div></div></section>
+    <section class="seccion" id="catalogo"><div class="contenedor">
+      <div class="seccion__encabezado"><p class="seccion__sobretitulo">Catálogo</p><h2 class="seccion__titulo">Servicios y <em>productos</em></h2><p class="seccion__texto">Reserva un servicio o lleva tus productos de cuidado para mantener el estilo en casa.</p></div>
+      <div class="herramientas"><label class="buscador"><span aria-hidden="true">⌕</span><input class="buscador__campo" id="buscador" type="search" placeholder="Buscar en el catálogo..." aria-label="Buscar"></label>
+        <select class="selector" id="orden" aria-label="Ordenar"><option value="destacados">Destacados</option><option value="menor">Precio: menor a mayor</option><option value="mayor">Precio: mayor a menor</option><option value="nombre">Nombre A–Z</option></select></div>
+      <nav class="pestanas" id="pestanas" aria-label="Categorías"></nav>
+      <p class="conteo" id="conteo" aria-live="polite">—</p><p class="conteo" id="estadoCatalogo" aria-live="polite">Preparando catálogo...</p>
+      <div class="grilla" id="grilla" aria-live="polite"></div>
+      <div class="vacio" id="vacio" hidden><h3>No encontramos resultados</h3><p>Prueba con otra búsqueda o limpia los filtros.</p><button class="boton boton--contorno" id="limpiar" type="button">Limpiar filtros</button></div>
+    </div></section>
+    <section class="seccion seccion--tinta" id="filtros"><div class="contenedor">
+      <div class="seccion__encabezado"><p class="seccion__sobretitulo">Filtro dinámico</p><h2 class="seccion__titulo">Encuentra la <em>opción ideal</em></h2></div>
+      <div class="capas"><label class="capas__etiqueta" for="capa1">Capa 1 · <span id="capa1Titulo">—</span></label><select class="selector" id="capa1"></select>
+        <label class="capas__etiqueta" for="capa2">Capa 2 · <span id="capa2Titulo">—</span></label><select class="selector" id="capa2" disabled><option value="">-- Primero elija la capa 1 --</option></select>
+        <div class="capas__resultado" id="resultadoCapas" aria-live="polite">Seleccione las capas anteriores...</div></div>
+    </div></section>
+    <section class="seccion"><div class="contenedor"><div class="banda"><div><h2 class="banda__titulo">¿Listo para tu próximo corte?</h2><p class="seccion__texto">Elige servicio, barbero, fecha y hora disponible. La reserva se confirma en segundos.</p></div><button class="boton boton--primario" data-abrir="modalReserva" type="button">Reservar turno ↗</button></div></div></section>
+    <section class="seccion seccion--tinta" id="preguntas"><div class="contenedor"><div class="seccion__encabezado"><p class="seccion__sobretitulo">Preguntas frecuentes</p><h2 class="seccion__titulo">Antes de <em>tu visita</em></h2></div><div class="acordeon"><div class="acordeon__item"><button class="acordeon__boton" type="button" aria-expanded="false">¿Cómo reservo un turno? <span>+</span></button><div class="acordeon__panel" style="display:none">Pulsa «Reservar turno», elige servicio, barbero, fecha y una hora en verde. Tienes 30 segundos para confirmar antes de que el horario se libere.</div></div><div class="acordeon__item"><button class="acordeon__boton" type="button" aria-expanded="false">¿Puedo cancelar o cambiar mi hora? <span>+</span></button><div class="acordeon__panel" style="display:none">Sí, avísanos por WhatsApp con anticipación y reprogramamos tu turno.</div></div><div class="acordeon__item"><button class="acordeon__boton" type="button" aria-expanded="false">¿Qué métodos de pago aceptan? <span>+</span></button><div class="acordeon__panel" style="display:none">Se define con el negocio (efectivo, QR u otros). Edítalo en la sección de contacto.</div></div><div class="acordeon__item"><button class="acordeon__boton" type="button" aria-expanded="false">¿Cómo hago mi pedido? <span>+</span></button><div class="acordeon__panel" style="display:none">Elige tus productos, revisa el carrito y pulsa «Finalizar pedido». Te llevará a WhatsApp con el detalle listo para enviar.</div></div></div></div></section>
+    <section class="seccion" id="contacto"><div class="contenedor rejilla">
+      <div><div class="seccion__encabezado"><p class="seccion__sobretitulo">Hablemos</p><h2 class="seccion__titulo">Estamos para <em>ayudarte</em></h2><p class="seccion__texto">Escríbenos tu consulta. Si el negocio ya configuró su WhatsApp, se abrirá el chat con tu mensaje.</p></div>
+        <h3 class="tarjeta-info__titulo">Horarios</h3><ul class="horario" id="listaHorario"></ul><p class="seccion__texto" data-site="direccion"></p><a class="boton boton--contorno" id="enlaceWhatsapp" href="#contacto">Escribir por WhatsApp</a></div>
+      <form class="formulario" id="formContacto" novalidate>
+        <label class="campo">Nombre completo<input class="campo__entrada" id="cNombre" autocomplete="name"><small class="campo__error" id="errNombre" style="display:none">Ingresa al menos 2 caracteres.</small></label>
+        <label class="campo">Correo electrónico<input class="campo__entrada" id="cCorreo" type="email" autocomplete="email"><small class="campo__error" id="errCorreo" style="display:none">Escribe un correo válido.</small></label>
+        <label class="campo">Tu mensaje<textarea class="campo__entrada" id="cMensaje" rows="4"></textarea><small class="campo__error" id="errMensaje" style="display:none">Escribe un mensaje de al menos 8 caracteres.</small></label>
+        <button class="boton boton--primario" type="submit">Enviar consulta ↗</button>
+        <div class="alerta-ok" id="alertaOk" role="status" style="display:none">✅ ¡Gracias! Tu consulta quedó registrada en este dispositivo.</div>
+      </form></div></section>
+  </main>
+  <footer class="pie"><div class="contenedor"><div class="pie__rejilla">
+    <div><a class="marca" href="#inicio"><img class="marca__logo" src="assets/images/logo.svg" width="44" height="44" alt=""><span class="marca__texto"><b class="marca__nombre" data-site="nombre">Filo Real</b><small class="marca__lema" data-site="eslogan">Corte · Barba · Detalle</small></span></a></div>
+    <div><h3 class="pie__titulo">Conócenos</h3><a class="pie__enlace" href="#catalogo">Catálogo</a><a class="pie__enlace" href="#contacto">Contacto</a></div>
+    <div><h3 class="pie__titulo">Redes sociales</h3><div id="listaRedes"></div></div></div>
+    <div class="pie__legal"><span>© <span id="anio">2026</span> Filo Real</span><span>Proyecto académico · Diseño Web II · UPDS La Paz</span><span>Precios y horarios de ejemplo: editar en data/</span></div></div></footer>
+  <button class="barra-carrito abrir-carrito" type="button"><span class="barra-carrito__cantidad" id="barraCantidad">0</span><span class="barra-carrito__texto">Ver carrito</span><strong id="barraTotal">—</strong></button>
+  <button class="subir" id="subir" type="button" aria-label="Volver arriba">↑</button>
+  <div class="avisos" id="avisos" aria-live="polite" aria-atomic="true"></div>
+  <div class="fondo-modal" id="fondoModal" hidden></div>
+  <aside class="carrito" id="carrito" aria-label="Carrito de compras">
+    <div class="carrito__cabecera"><h2 class="modal__titulo">Tu carrito <small id="carritoConteo">(0)</small></h2><button class="boton-icono" data-cerrar type="button" aria-label="Cerrar carrito">×</button></div>
+    <div class="carrito__lista" id="listaCarrito"></div>
+    <div class="carrito__pie">
+      <label class="campo">Entrega<select class="campo__entrada" id="entregaCarrito"></select></label>
+      <dl class="desglose"><div class="desglose__fila"><dt>Subtotal</dt><dd id="subtotal">—</dd></div><div class="desglose__fila"><dt>Entrega</dt><dd id="costoEntrega">—</dd></div><div class="desglose__fila desglose__fila--total"><dt>Total</dt><dd id="total">—</dd></div></dl>
+      <button class="boton boton--primario boton--lleno" id="btnPedido" type="button">Finalizar pedido ↗</button>
+      <button class="boton boton--contorno boton--lleno" data-cerrar type="button">← Seguir comprando</button>
+    </div>
+  </aside>
+  <section class="modal modal--ancho" id="modalProducto" role="dialog" aria-modal="true" aria-label="Detalle del producto" hidden><button class="modal__cerrar" data-cerrar type="button" aria-label="Cerrar">×</button><div class="detalle" id="contenidoProducto"></div></section>
+  <section class="modal" id="modalPedido" role="dialog" aria-modal="true" aria-labelledby="tituloPedido" hidden><button class="modal__cerrar" data-cerrar type="button" aria-label="Cerrar">×</button>
+    <h2 class="modal__titulo" id="tituloPedido">Confirmar pedido</h2><p class="modal__texto">Revisa los datos. Al confirmar se abre WhatsApp con tu pedido listo para enviar.</p>
+    <ul class="confirmacion"><li class="confirmacion__fila"><span>Resumen</span><b id="pedidoResumen">—</b></li><li class="confirmacion__fila"><span>Monto a cancelar</span><b id="pedidoTotal">—</b></li></ul>
+    <form class="formulario" id="formPedido" novalidate>
+      <label class="campo">Nombre completo<input class="campo__entrada" id="pedidoNombre" required minlength="2" autocomplete="name"></label>
+      <label class="campo">Teléfono / WhatsApp<input class="campo__entrada" id="pedidoTelefono" required inputmode="tel" pattern="[0-9 +\(\)\-]{7,}" autocomplete="tel"></label>
+      <label class="campo" id="pedidoDireccionCaja">Dirección o referencia de entrega<input class="campo__entrada" id="pedidoDireccion" autocomplete="street-address"></label>
+      <label class="campo">Nota adicional<textarea class="campo__entrada" id="pedidoNota" rows="2"></textarea></label>
+      <div class="modal__acciones"><button class="boton boton--contorno" type="button" data-cerrar>Cancelar</button><button class="boton boton--primario" type="submit">Enviar pedido</button></div>
+    </form></section>
+  <section class="modal" id="modalReserva" role="dialog" aria-modal="true" aria-labelledby="tituloReserva" hidden><button class="modal__cerrar" data-cerrar type="button" aria-label="Cerrar">×</button>
+    <div id="reservaPaso1"><h2 class="modal__titulo" id="tituloReserva">Reservar turno</h2><p class="modal__texto">Verde = disponible · Rojo = ocupado.</p>
+      <form class="formulario" id="formReserva" novalidate>
+        <label class="campo">Servicio<select class="campo__entrada" id="reservaServicio"></select></label>
+        <label class="campo">Barbero<select class="campo__entrada" id="reservaBarbero"></select></label>
+        <label class="campo">Fecha<input class="campo__entrada" id="reservaFecha" type="date" required></label>
+        <div><span class="capas__etiqueta">Horario</span><div class="horas" id="reservaHoras"></div><p class="leyenda">● Disponible &nbsp; ● Ocupado</p></div>
+        <label class="campo">Tu nombre<input class="campo__entrada" id="reservaNombre" required minlength="2" autocomplete="name"></label>
+        <label class="campo">Teléfono / WhatsApp<input class="campo__entrada" id="reservaTelefono" required inputmode="tel" pattern="[0-9 +\(\)\-]{7,}" autocomplete="tel"></label>
+        <ul class="confirmacion"><li class="confirmacion__fila"><span id="reservaResumen">—</span><b id="reservaTotal">—</b></li></ul>
+        <button class="boton boton--primario boton--lleno" type="submit">Continuar ↗</button></form></div>
+    <div id="reservaPaso2" hidden><h2 class="modal__titulo">Confirmar reserva</h2><p class="modal__texto">Verifique el detalle de su reserva antes de procesar el registro:</p>
+      <ul class="confirmacion"><li class="confirmacion__fila"><span>Servicio</span><b id="confServicio">—</b></li><li class="confirmacion__fila"><span>Cuándo</span><b id="confCuando">—</b></li><li class="confirmacion__fila"><span>Monto a cancelar</span><b id="confMonto">—</b></li><li class="confirmacion__fila"><span>Tiempo restante para confirmar</span><b class="cuenta" id="reservaCuenta">00:30</b></li></ul>
+      <div class="modal__acciones"><button class="boton boton--contorno" id="reservaVolver" type="button">← Volver</button><button class="boton boton--primario" id="reservaConfirmar" type="button">Confirmar reserva</button></div></div></section>
+</body></html>
